@@ -2,10 +2,10 @@
   "name": "lizi-web",
   "version": "0.1.0",
   "description": "A cross platform particles library, fast, light-weight, simple.",
-  "main": "dist/index.min.js",
+  "main": "dist/index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "compile": "tsc && cd dist && browserify index.js --standalone Lizi > lizi.js && uglifyjs lizi.js > ../lizi.min.js && rm -rf ./* && cp ../lizi.min.js ./lizi.min.js"
+    "compile": "tsc && cd dist && browserify index.js --standalone Lizi > lizi.js && uglifyjs lizi.js > ../lizi.min.js && rm lizi.js"
   },
   "author": "PonyCui",
   "license": "GPLv3",

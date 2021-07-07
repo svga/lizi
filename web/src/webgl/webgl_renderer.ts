@@ -189,14 +189,13 @@ export class WebGLRenderer implements Renderer {
         for (let cellIndex = 0; cellIndex < emitter.cells.length; cellIndex++) {
           let cell = emitter.cells[cellIndex];
           let cellBirthRate = emitter.birthRate * cell.birthRate;
+          if (!cell.contents || cell.contents.width <= 0) continue;
           for (let index = 0; index < cellBirthRate; index++) {
             let particle = new _Particle();
-            if (cell.contents) {
-              particle.textureId =
-                this.activeTexturesCache[cell.contents.src] ??
-                this.createTexture(cell.contents);
-              this.activeTexturesCache[cell.contents.src] = particle.textureId;
-            }
+            particle.textureId =
+              this.activeTexturesCache[cell.contents.src] ??
+              this.createTexture(cell.contents);
+            this.activeTexturesCache[cell.contents.src] = particle.textureId;
             particle.size = cell.contents?.width ?? 0.0;
             particle.delay = Math.random() * 1000;
             particle.maxLife =
