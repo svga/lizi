@@ -1,0 +1,3 @@
+include ':lizi'
+include ':app'
+rootProject.name = "lizi_example"
