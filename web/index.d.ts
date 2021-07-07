@@ -31,8 +31,6 @@ export class Emitter {
   emitterMode: EmitterMode = EmitterMode.surface;
   birthRate: number = 1;
   cells: Cell[] = [];
-  update(ms: number);
-  draw(canvas: CanvasRenderingContext2D);
 }
 
 export class Cell {
@@ -54,6 +52,15 @@ export class Cell {
   emissionRange: number = 0.0;
   spin: number = 0.0;
   spinRange: number = 0.0;
+}
+
+export class Player {
+  constructor(readonly canvas: HTMLCanvasElement);
+  addEmitter(emitter: Emitter): void;
+  removeEmitter(emitter: Emitter): void;
+  removeAllEmitters(): void;
+  start(): void;
+  stop(): void;
 }
 
 export default Lizi;
