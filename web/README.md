@@ -6,10 +6,15 @@ Lizi refers `Apple's CoreAnimation Framework`, the particles parameters same as 
 
 ## Getting Started
  
-### Use codepen
+### Use codepen (React example)
 
+The simplest way to try Lizi is use StackBlitz.
 
-### Integrade into your project
+Click this link to start.
+
+https://stackblitz.com/edit/react-ts-qcampg?file=index.tsx
+
+### Integrate into your project
 
 Use npm or yarn install lizi library.
 
